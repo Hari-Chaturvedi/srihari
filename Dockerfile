@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.2.28-apache-alpine
 
 # Install system dependencies + MySQLi
 RUN apt-get update && \

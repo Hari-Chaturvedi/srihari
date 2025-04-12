@@ -10,7 +10,7 @@ $dotenv->load();
 $servername = $_ENV["DB_HOST"];
 $username = $_ENV["DB_USERNAME"];
 $password = "";
-$dbname = $_ENV["DB_NAME"];
+$dbname = $_ENV["DB_NAME1"];
 $port = $_ENV["DB_PORT"];
 
 try {

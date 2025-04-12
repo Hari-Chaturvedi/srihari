@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   
+   # Block direct access to admin_panel.php EXCEPT when coming from login.php
+   RewriteCond %{REQUEST_URI} ^/admin_panel\.php [NC]
+   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?(localhost|yourdomain\.com)/admin_login\.php [NC]
+   RewriteRule ^ - [F,L]
+</IfModule>
+
+# Allow direct access to admin_login.php
+<Files "admin_login.php">
+   Order Allow,Deny
+   Allow from all
+</Files>
+
+AddType application/zip .zip
+AddType application/octet-stream .zip

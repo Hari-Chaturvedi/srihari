@@ -7,11 +7,11 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Database configuration - move these to a config file in production
-$servername = "localhost";
-$username = "root";
+$servername = $_ENV["DB_HOST"];
+$username = $_ENV["DB_USERNAME"];
 $password = "";
-$dbname = "study_material";
-$port = 3306;
+$dbname = $_ENV["DB_NAME"];
+$port = $_ENV["DB_PORT"];
 
 try {
     // Create connection

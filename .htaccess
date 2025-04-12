@@ -15,3 +15,6 @@
 
 AddType application/zip .zip
 AddType application/octet-stream .zip
+
+RewriteEngine On
+RewriteRule ^healthz$ healthz.php [L]
